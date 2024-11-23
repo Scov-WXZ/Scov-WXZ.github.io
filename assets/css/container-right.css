@@ -1,0 +1,16 @@
+/* 右栏样式 */
+.container-right {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 导航栏样式 */
+.container-right-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.container-right-nav li {
+  margin-bottom: 5px;
+}

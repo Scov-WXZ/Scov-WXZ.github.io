@@ -1,0 +1,95 @@
+/* 左栏样式 */
+.container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 头像样式 */
+.container-left-avatar {
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 3px solid #e0e0e0; /* 调整边框颜色 */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4); /* 增加阴影效果 */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* 增加动画持续时间 */
+  min-width: 100px; /* 设置最小宽度 */
+  min-height: 100px; /* 设置最小高度 */
+}
+
+/* 头像图片样式 */
+.container-left-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+
+/* 鼠标悬停或激活时的头像样式 */
+.container-left-avatar:hover img,
+.container-left-avatar:focus img,
+.container-left-avatar:active img {
+  transform: scale(1.1); /* 增加放大比例 */
+}
+
+.container-left-avatar:hover,
+.container-left-avatar:focus,
+.container-left-avatar:active {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* 鼠标悬停时增加阴影效果 */
+}
+
+.container-left-motto {
+  max-width: 80%;
+}
+
+/* 修改后的motto span样式 */
+.container-left-motto span {
+  display: inline-block;
+  white-space: nowrap; /* 保持文字在一行显示 */
+  overflow: hidden;
+  border-right: 0.1em solid; /* 光标效果 */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  min-height: 2em; /* 设置最小高度，防止布局跳动 */
+  color: #808080;
+  user-select: none;
+}
+
+/* 光标动画 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* 链接列表样式 */
+.container-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 链接样式 */
+.container-left li {
+  margin-bottom: 10px;
+}
